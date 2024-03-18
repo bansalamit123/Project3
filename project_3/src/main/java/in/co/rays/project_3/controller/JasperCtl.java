@@ -1,6 +1,7 @@
 package in.co.rays.project_3.controller;
 
 import java.io.IOException;
+import java.sql.Connection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -52,7 +53,7 @@ public class JasperCtl extends BaseCtl {
 
 			Map<String, Object> map = new HashMap<String, Object>();
 			map.put("ID", 1l);
-			java.sql.Connection conn = null;
+			Connection conn = null;
 
 			
 

@@ -16,7 +16,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>User List</title>
 <script src="<%=ORSView.APP_CONTEXT%>/js/jquery.min.js"></script>
-<script type="text/javascript" src="<%=ORSView.APP_CONTEXT%>/js/CheckBox11.js"></script>
+<script type="text/javascript"
+	src="<%=ORSView.APP_CONTEXT%>/js/CheckBox11.js"></script>
 <style>
 .hm {
 	background-image: url('<%=ORSView.APP_CONTEXT%>/img/rain.jpg');
@@ -38,11 +39,9 @@
 </head>
 
 <body class="hm">
-<%@include file="Header.jsp"%>
-<%@include file ="calendar.jsp" %>
-	<div>
-	
-</div>
+	<%@include file="Header.jsp"%>
+	<%@include file="calendar.jsp"%>
+	<div></div>
 	<div>
 		<form class="pb-5" action="<%=ORSView.USER_LIST_CTL%>" method="post">
 			<jsp:useBean id="dto" class="in.co.rays.project_3.dto.UserDTO"
@@ -115,31 +114,31 @@
 						class="form-control"
 						value="<%=ServletUtility.getParameter("firstName", request)%>">
 				</div>
-				
+
 				&emsp;
 				<div class="col-sm-2">
 					<input type="text" name="login" placeholder="Enter Login Id"
 						class="form-control"
 						value="<%=ServletUtility.getParameter("login", request)%>">
 				</div>
-				 &emsp;
-				<div class="col-sm-2"><%=HTMLUtility.getList("Role", String.valueOf(dto.getRoleId()), list1)%></div> 
-&emsp;
-			<%-- 	
+				&emsp;
+				<div class="col-sm-2"><%=HTMLUtility.getList("Role", String.valueOf(dto.getRoleId()), list1)%></div>
+				&emsp;
+					
 				<div class="col-sm-2">
 					<input type="text" name="dob" class="form-control" placeholder="Enter Date Of Birth" id="datepicker" readonly="readonly"
 							value="<%=DataUtility.getDateString(dto.getDob())%>">
-				</div> --%>
-				
+				</div>
+
 				<div class="col-sm-2">
-					<input type="submit" class="btn btn-primary btn-md" style="font-size: 15px" name="operation"
-						value="<%=UserListCtl.OP_SEARCH%>">
-						&emsp;
-						 <input type="submit" class="btn btn-dark btn-md" style="font-size: 15px"
+					<input type="submit" class="btn btn-primary btn-md"
+						style="font-size: 15px" name="operation"
+						value="<%=UserListCtl.OP_SEARCH%>"> &emsp; <input
+						type="submit" class="btn btn-dark btn-md" style="font-size: 15px"
 						name="operation" value="<%=UserListCtl.OP_RESET%>">
 				</div>
-				
-				
+
+
 				<div class="col-sm-2"></div>
 			</div>
 
@@ -147,7 +146,7 @@
 			<div style="margin-bottom: 20px;" class="table-responsive">
 				<table class="table table-bordered table-dark table-hover">
 					<thead>
-						<tr style="background-color: #8C8C8C;">
+						<tr style="background-color: blue;">
 
 							<th width="10%"><input type="checkbox" id="select_all"
 								name="Select" class="text"> Select All</th>
@@ -192,15 +191,22 @@
 			</div>
 			<table width="100%">
 				<tr>
-					<td><input type="submit" name="operation" class="btn btn-warning btn-md" style="font-size: 17px" value="<%=UserListCtl.OP_PREVIOUS%>"
-						
+					<td><input type="submit" name="operation"
+						class="btn btn-warning btn-md" style="font-size: 17px"
+						value="<%=UserListCtl.OP_PREVIOUS%>"
 						<%=pageNo > 1 ? "" : "disabled"%>></td>
-					
-					<td><input type="submit" name="operation" class="btn btn-primary btn-md" style="font-size: 17px" value="<%=UserListCtl.OP_NEW%>"></td>
-					
-					<td><input type="submit" name="operation" class="btn btn-danger btn-md" style="font-size: 17px" value="<%=UserListCtl.OP_DELETE%>"></td>
 
-					<td align="right"><input type="submit" name="operation" class="btn btn-warning btn-md" style="font-size: 17px" style="padding: 5px;" value="<%=UserListCtl.OP_NEXT%>"
+					<td><input type="submit" name="operation"
+						class="btn btn-primary btn-md" style="font-size: 17px"
+						value="<%=UserListCtl.OP_NEW%>"></td>
+
+					<td><input type="submit" name="operation"
+						class="btn btn-danger btn-md" style="font-size: 17px"
+						value="<%=UserListCtl.OP_DELETE%>"></td>
+
+					<td align="right"><input type="submit" name="operation"
+						class="btn btn-warning btn-md" style="font-size: 17px"
+						style="padding: 5px;" value="<%=UserListCtl.OP_NEXT%>"
 						<%=(nextPageSize != 0) ? "" : "disabled"%>></td>
 				</tr>
 				<tr></tr>

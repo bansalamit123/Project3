@@ -60,7 +60,7 @@ padding-bottom: 11px;
 							  long id=DataUtility.getLong(request.getParameter("id"));
 							
 							
-								if (dto.getId()!=null) {
+								if (dto.getId()!=null&&id>0) {
 							%>
 							<h3 class="text-center default-text text-primary">Update User</h3>
 							<%
@@ -140,7 +140,7 @@ padding-bottom: 11px;
 	<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("lastName", request)%></font></br>		
 	
 								<%
-								if (id <=0) {
+								if (dto.getId()==null||id<=0) {
 								%>
 
                                <span class="pl-sm-5"><b>Password</b>
@@ -236,7 +236,7 @@ padding-bottom: 11px;
     </div>	
 	<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("dob", request)%></font></br>
 					<%
-								if (id > 0) {
+								if (dto.getId()!=null&&id>0) {
 							%>
 
 							<div class="text-center">

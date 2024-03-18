@@ -3,16 +3,16 @@ package in.co.rays.project_3.model;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
-
 /**
  * ModelFactory decides which model implementation run
+ * 
  * @author Amit Bansal
  */
 public final class ModelFactory {
 
 	private static ResourceBundle rb = ResourceBundle.getBundle("in.co.rays.project_3.bundle.system");
 	private static final String DATABASE = rb.getString("DATABASE");
-	
+
 	private static ModelFactory mFactory = null;
 	private static HashMap modelCache = new HashMap();
 
@@ -87,7 +87,7 @@ public final class ModelFactory {
 		return userModel;
 	}
 
-	public StudentModelInt getStudentModel() { 
+	public StudentModelInt getStudentModel() {
 		StudentModelInt studentModel = (StudentModelInt) modelCache.get("studentModel");
 		if (studentModel == null) {
 			if ("Hibernate".equals(DATABASE)) {

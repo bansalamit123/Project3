@@ -73,7 +73,7 @@ i.css {
 					<div class="card input-group-addon grad	">
 						<div class="card-body">
 
-							<h3 class="text-center text-black">Login</h3>
+							<h3 class="text-center ">Login</h3>
 							<!--Body-->
 							<div>
 
@@ -163,7 +163,7 @@ i.css {
 							<div class="text-center">
 
 								<input type="submit" name="operation"
-									class="btn btn-danger btn-md hover-overlayed"
+									class="btn btn-success btn-md hover-overlayed"
 									style="font-size: 17px" value="<%=LoginCtl.OP_SIGN_IN%>">
 
 								<input type="submit" name="operation"

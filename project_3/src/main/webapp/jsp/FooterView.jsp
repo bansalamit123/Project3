@@ -12,12 +12,12 @@
 	width: 100%;
 	color: white;
 	text-align: center;
-	background-color: #A6A6A6;
+	background-color: red;
 }
 </style>
 </head>
 <body>
-	<div class="footer">
+	<div class="footer ">
 		<center>
 			<font color="black">
 				<h5>&copy; RAYS Technologies</h5>

@@ -50,12 +50,12 @@
 
 		<img src="<%=ORSView.APP_CONTEXT%>/img/custom.png" width="190px"
 			height="50px"> </a>
-		<button class="navbar-toggler " type="button" data-toggle="collapse"
+		 <button class="navbar-toggler " type="button" data-toggle="collapse"
 			data-target="#navbarNav" aria-controls="navbarNav"
 			aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"> <i class="fas fa-bars"
 				style="color:; font-size: 28px;"></i></span>
-		</button>
+		</button> 
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="nav navbar-nav ml-auto">
 				<a class="nav-link" href="#"> <span class="sr-only">(current)</span>
